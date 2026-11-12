@@ -4,36 +4,119 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>UAParanormal</title>
+  <meta name="description" content="UAParanormal is a community app for sharing and discussing UAP and paranormal sightings. Built by an independent developer in Kentucky.">
+  <meta property="og:title" content="UAParanormal">
+  <meta property="og:description" content="A community app for sharing and discussing UAP and paranormal sightings.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://uaparanormal.app/">
+  <meta property="og:image" content="https://uaparanormal.app/app-icon.png">
+  <meta name="theme-color" content="#0a0d14">
   <style>
+    :root {
+      --bg: #0a0d14;
+      --card: #111827;
+      --border: #1f2a3d;
+      --text: #e6e9f0;
+      --muted: #9aa6ba;
+      --accent: #3b82f6;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
     body {
       margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #0b0e16;
-      color: #e4e9f2;
-      font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      text-align: center;
-      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
     }
-    h1 { margin: 0 0 8px; font-size: 32px; }
-    p { margin: 6px 0; color: #9aa5bd; line-height: 1.5; }
-    a { color: #3b82f6; }
-    .links { margin-top: 20px; font-size: 14px; }
-    .links a { margin: 0 10px; }
+    a { color: var(--accent); }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+    .hero { text-align: center; padding: 56px 0 32px; }
+    .hero img {
+      width: 168px; height: 168px; border-radius: 36px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 40px rgba(59, 130, 246, 0.25);
+    }
+    .hero h1 { font-size: clamp(2rem, 6vw, 2.8rem); margin: 22px 0 8px; letter-spacing: -0.01em; }
+    .tagline { color: var(--muted); font-size: 1.1rem; margin: 0 auto; max-width: 560px; }
+    .status {
+      display: inline-block; margin-top: 20px; padding: 6px 14px;
+      border: 1px solid var(--border); border-radius: 999px;
+      color: var(--muted); font-size: 0.9rem; background: var(--card);
+    }
+
+    section { padding: 28px 0; }
+    h2 { font-size: 1.35rem; margin: 0 0 14px; }
+    p { margin: 0 0 14px; }
+
+    .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px; }
+    .card h3 { margin: 0 0 6px; font-size: 1.02rem; }
+    .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+    .safety li { margin-bottom: 8px; }
+    .safety { padding-left: 20px; margin: 0; color: var(--muted); }
+
+    .contact { text-align: center; }
+    footer { border-top: 1px solid var(--border); margin-top: 24px; padding: 24px 0 40px; text-align: center; color: var(--muted); font-size: 0.92rem; }
+    footer a { margin: 0 8px; }
   </style>
 </head>
 <body>
-  <main>
-    <h1>UAParanormal</h1>
-    <p>A community for sharing and discussing UAP and paranormal sightings.</p>
-    <p>The app is coming soon.</p>
-    <p>Contact: <a href="mailto:support@uaparanormal.app">support@uaparanormal.app</a></p>
-    <p class="links">
+  <main class="wrap">
+    <header class="hero">
+      <img src="/app-icon.png" alt="UAParanormal app icon: a flying saucer beaming a light down over a night forest" width="168" height="168">
+      <h1>UAParanormal</h1>
+      <p class="tagline">A community for sharing and discussing UAP and paranormal sightings.</p>
+      <span class="status">Android app in testing &middot; Preparing for release</span>
+    </header>
+
+    <section aria-labelledby="about">
+      <h2 id="about">About</h2>
+      <p>UAParanormal is a social app made for people who are curious about UAP, cryptids, ghosts, orbs, and the unexplained. It gives the community a dedicated place to post what they see, find others who saw something similar, and talk it through.</p>
+      <p>It is built and run by Mike Coomer, an independent developer in Kentucky. It started as a place I wanted to use myself, and I built it with safety and privacy in mind from the start.</p>
+    </section>
+
+    <section aria-labelledby="features">
+      <h2 id="features">What you can do</h2>
+      <div class="grid">
+        <div class="card"><h3>Share sighting reports</h3><p>Post a report with photos or video, the sighting type, date, and general area.</p></div>
+        <div class="card"><h3>See it on the map</h3><p>Reports appear as pins on a shared map, placed by general area, not exact addresses.</p></div>
+        <div class="card"><h3>Share articles and news</h3><p>Link to stories and videos, add your take, and react, including a skeptical option.</p></div>
+        <div class="card"><h3>Private messages</h3><p>Message other members one-on-one in the SCIF.</p></div>
+        <div class="card"><h3>Follow members</h3><p>Follow people you trust and see their posts in one place. Verified badges mark trusted accounts.</p></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="safety">
+      <h2 id="safety">Safety and privacy</h2>
+      <ul class="safety">
+        <li>Members must be 18 or older.</li>
+        <li>You choose how much location detail to share, and your real name stays private unless you turn it on.</li>
+        <li>Reporting, blocking, and moderation tools help keep the community civil.</li>
+        <li>You can delete your account and your content at any time.</li>
+      </ul>
+    </section>
+
+    <!-- DEMO VIDEO: when the walkthrough video is ready, add a section here:
+    <section aria-labelledby="demo">
+      <h2 id="demo">See it in action</h2>
+      <p><a href="PASTE-VIDEO-LINK-HERE">Watch a 2-minute walkthrough</a></p>
+    </section>
+    -->
+
+    <section class="contact" aria-labelledby="contact">
+      <h2 id="contact">Contact</h2>
+      <p>Questions, feedback, or press: <a href="mailto:support@uaparanormal.app">support@uaparanormal.app</a></p>
+    </section>
+
+    <footer>
       <a href="/terms/">Terms of Use</a>
       <a href="/privacy/">Privacy Policy</a>
-    </p>
+      <a href="/delete-account/">Delete account</a>
+    </footer>
   </main>
 </body>
 </html>
